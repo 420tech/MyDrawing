@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MyDrawing.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:vm="clr-namespace:MyDrawing.ViewModels"
+    x:DataType="vm:MainViewModel">
+    <ScrollView>
+        <StackLayout>
+            <Grid ColumnDefinitions="*, 80" RowDefinitions="50, 40,*">
+                <mct:DrawingView
+                    Grid.Row="0"
+                    Grid.RowSpan="3"
+                    HeightRequest="500"
+                    IsMultiLineModeEnabled="true"
+                    LineColor="Black"
+                    LineWidth="2"
+                    WidthRequest="800" />
+                <Button
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="Circle" />
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
